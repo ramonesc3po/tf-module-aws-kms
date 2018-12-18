@@ -7,11 +7,11 @@ output "kms_key_arn" {
 }
 
 output "map_name_key_id" {
-  value = "${zipmap(element(aws_kms_alias.this.*.name, 0) ,element(aws_kms_key.this.*.id, 0) )}"
+  value = "${zipmap(aws_kms_alias.this.*.name,aws_kms_key.this.*.id)}"
 }
 
 output "map_name_key_arn" {
-  value = "${zipmap(element(aws_kms_alias.this.*.name, 0) ,element(aws_kms_key.this.*.arn, 0) )}"
+  value = "${zipmap(aws_kms_alias.this.*.name,aws_kms_key.this.*.arn)}"
 }
 
 output "alias_name" {
