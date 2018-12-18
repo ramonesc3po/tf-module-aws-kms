@@ -1,5 +1,5 @@
 locals {
-  alias_name = "${var.key_organization}-${var.key_name}-${key_region}-${var.key_tier}"
+  alias_name = "${var.key_organization}-${var.key_name}-${var.key_region}-${var.key_tier}"
 
   common_tags = {
     Terraform    = "true"
